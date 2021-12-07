@@ -1,8 +1,13 @@
 <body>
 	<form action="traitementDonneeMed.php" method="post">
-	<p>Nom <input type="text" name="n_medecin" /></p>
-	<p>Prenom <input type="text" name="p_medecin" /></p>
-    <p>Civilie <input type="text" name="c_medecin" /></p>
+	<p>Nom <input type="text" name="n_medecin" required /></p>
+	<p>Prenom <input type="text" name="p_medecin"required /></p>
+	<label>Civilite</label>
+	<select name="Civilité" required>
+		<option value="dog">Monsieur</option>
+		<option value="dog">Madame</option>
+		<option value="dog">Autre</option>
+	</select>
 	<p> <input type="submit" name="valideMed" value="Valider" required> <input type="reset" name="supp" value="Supprimer"> </p>
 	</form>
 </body>
