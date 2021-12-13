@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 06 déc. 2021 à 13:49
+-- Généré le : lun. 13 déc. 2021 à 13:47
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `medecin`;
 CREATE TABLE IF NOT EXISTS `medecin` (
-  `Id_medecin` int(11) NOT NULL,
+  `Id_medecin` int(11) NOT NULL AUTO_INCREMENT,
   `Civilite` char(5) DEFAULT NULL,
   `Nom` varchar(50) DEFAULT NULL,
   `Prenom` varchar(50) DEFAULT NULL,
