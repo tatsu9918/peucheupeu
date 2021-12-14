@@ -21,7 +21,10 @@ while ($data = $res->fetch()) {
 					<td><?php echo $data['Ville']; ?></td>
 					<td><?php echo $data['Date_naissance']; ?></td>
                     <td><?php echo $data['Lieu_naissance']; ?></td>
-                    <td><?php echo $data['Num_secu']; ?></td>   
+                    <td><?php echo $data['Num_secu']; ?></td>
+					<form action="patient.html" method="post">
+					<td><a href="modifierusager.php?id=<?php echo $data['Num_secu'];?>">oui</a></td> 
+					<td><a href="supprePatient.php?id=<?php echo $data['Num_secu'];?>">oui</a></td>
 				</tr>
 			  
 		<?php
