@@ -18,7 +18,7 @@ if($rox[0] ==0 ){
     $val=mysqli_fetch_row($resultat);
     $date_naissance=strtotime($_POST['dt_naissance']);
     $date = date('Y-m-d', $date_naissance);
-    $sql=" INSERT INTO patient (Num_secu,Civilite,Nom,Prenom,Adresse,Date_naissance,Lieu_naissance,Id_medecin) VALUES ('$_POST[secu]','$_POST[civPa]','$_POST[nomPa]','$_POST[prenomPa]','$_POST[adressePa]','$date','$_POST[l_naissance]','$val[0]')";
+    $sql=" INSERT INTO patient (Num_secu,Civilite,Nom,Prenom,Adresse,Date_naissance,Lieu_naissance,Id_medecin,Ville) VALUES ('$_POST[secu]','$_POST[civPa]','$_POST[nomPa]','$_POST[prenomPa]','$_POST[adressePa]','$date','$_POST[l_naissance]','$val[0]','$_POST[villePa]')";
     
     $test=$mysqli->query($sql);
     if (!$test) 
