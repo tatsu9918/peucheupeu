@@ -33,6 +33,6 @@ while ($data = $res->fetch()) {
 			 $res->closeCursor();
 		 ?>
 	
-	
+	<p ><input type="button" name="supp" value="retour", onclick="window.location='index.html'"> </p>
 
 </html>

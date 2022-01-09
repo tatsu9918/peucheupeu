@@ -8,15 +8,17 @@ if (! $con)
 
 
 
-$resultat = mysqli_query($con,"SELECT COUNT(Num_secu) FROM patient WHERE Num_secu = '$_POST[secu]'");
-$rox=mysqli_fetch_row($resultat);
-if($rox[0] ==0 ){
-    $resultat = mysqli_query($con,"SELECT COUNT(Num_secu) FROM patient WHERE Num_secu = '$_POST[secu]'");
-    $rox=mysqli_fetch_row($resultat);
-    $sql=" INSERT INTO patient (Num_secu,Civilite,Nom,Prenom,Adresse,Date_naissance,Lieu_naissance) VALUES ('$_POST[secu]','$_POST[civPa]','$_POST[nomPa]','$_POST[prenomPa]','$_POST[adressePa]','$_POST[dt_naissance]','$_POST[l_naissance]')";
-    mysqli_query($con, $sql);
-    header('Location: http://localhost/m%c3%a9decin/projet-medecin/patient.html');
-}
+
+
+
+$resultat = mysqli_query($con,"SELECT Id_medecin FROM medecin WHERE medecin.Nom = '$_POST[nMed]' and medecin.Prenom= '$_POST[pMed]' ");
+$val=mysqli_fetch_row($resultat);
+$date_naissance=strtotime($_POST['dRdv']);
+$date = date('Y-m-d', $date_naissance);
+$sql=" INSERT INTO rendez_vous (Num_secu,Id_medecin,Date_rdv,Heure_rdv,Duree_rdv) VALUES ('$_POST[secu]','$val[0]  ','$date','$_POST[prenomPa]','$_POST[hRdv]','30')";
+mysqli_query($con, $sql);
+header('Location: http://localhost/m%c3%a9decin/projet-medecin/patient.html');
+
 
 
 
