@@ -12,7 +12,7 @@ if (!$test)
 	{
 	die("ne pourrait pas se relier : ". $mysqli->error	);
 	}
-// header('Location: http://localhost/m%c3%a9decin/projet-medecin/patient.html');	
+ header('Location:http://localhost/medecin/projet-medecin/patient.html');	
 
 
 
